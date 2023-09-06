@@ -5,6 +5,6 @@
 <p>Title: <%= @book.title %></p>
 <p>Author: <%= @book.author %></p>
 
-<%= link_to 'Yes, Delete', book_path(@book), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+<%= button_to 'Yes, Delete', @book, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
 
-<%= link_to 'No, Go Back', book_path(@book), class: 'btn btn-primary' %>
+<%= button_to 'No, Go Back', book_path(@book), class: 'btn btn-primary' %>
