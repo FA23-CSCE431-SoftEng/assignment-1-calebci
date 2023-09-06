@@ -16,6 +16,24 @@
     <%= form.text_field :title %>
   </div>
 
+  <!-- Add Author Field -->
+  <div>
+    <%= form.label :author, style: "display: block" %>
+    <%= form.text_field :author %>
+  </div>
+
+  <!-- Add Price Field -->
+  <div>
+    <%= form.label :price, style: "display: block" %>
+    <%= form.number_field :price, step: 0.01 %>
+  </div>
+
+  <!-- Add Published Date Dropdown -->
+  <div>
+    <%= form.label :published_date, style: "display: block" %>
+    <%= form.select :published_date, (2000..Time.now.year).to_a.reverse %>
+  </div>
+
   <div>
     <%= form.submit %>
   </div>
